@@ -41,11 +41,28 @@ export function setupEventListeners() {
       });
     });
 
-    // Validación del formulario
+    // Nueva funcionalidad para el formulario de contacto
     const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
-      alert("Formulario enviado con éxito.");
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      // Validación simple
+      if (name && email && message) {
+        // Simular el envío del formulario
+        setTimeout(() => {
+          formMessage.textContent = "¡Formulario enviado con éxito!";
+          formMessage.style.color = "green";
+        }, 500);
+      } else {
+        formMessage.textContent = "Por favor, completa todos los campos.";
+        formMessage.style.color = "red";
+      }
     });
   });
 }
