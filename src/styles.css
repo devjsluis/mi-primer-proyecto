@@ -70,3 +70,18 @@ li {
     padding: 20px;
     border: 1px solid #ddd;
 }
+
+#showMessageButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#showMessageButton:hover {
+    background-color: #218838;
+}

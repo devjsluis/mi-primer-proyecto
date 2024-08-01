@@ -8,6 +8,11 @@ export function setupEventListeners() {
     );
     const showTimeButton = document.getElementById("showTimeButton");
     const greeting = document.getElementById("greeting");
+    const showMessageButton = document.getElementById("showMessageButton");
+
+    showMessageButton.addEventListener("click", () => {
+      alert("¡Este es un nuevo mensaje!");
+    });
 
     // Cambiar el texto
     changeTextButton.addEventListener("click", () => {
