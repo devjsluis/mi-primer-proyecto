@@ -1,11 +1,17 @@
 // Espera a que el contenido del DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
-  // Selecciona el botón y el elemento del párrafo por su ID
   const button = document.getElementById("changeTextButton");
   const greeting = document.getElementById("greeting");
 
-  // Añade un event listener al botón para cambiar el texto del párrafo
   button.addEventListener("click", () => {
     greeting.textContent = "¡Texto cambiado con JavaScript!";
+  });
+
+  // Nueva funcionalidad: Mostrar un mensaje al hacer clic en un elemento de la lista
+  const listItems = document.querySelectorAll("ul li");
+  listItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      alert(`¡Has clickeado en: ${item.textContent}!`);
+    });
   });
 });
