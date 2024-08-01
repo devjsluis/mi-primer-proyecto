@@ -1,7 +1,9 @@
 // src/events.js
+import { getWeather } from "./api";
 
 export function setupEventListeners() {
   document.addEventListener("DOMContentLoaded", () => {
+    const weatherButton = document.getElementById("showWeatherButton");
     const changeTextButton = document.getElementById("changeTextButton");
     const changeBackgroundColorButton = document.getElementById(
       "changeBackgroundColorButton"
@@ -39,6 +41,16 @@ export function setupEventListeners() {
       item.addEventListener("click", () => {
         alert(`¡Has clickeado en: ${item.textContent}!`);
       });
+    });
+
+    // Mostrar datos de ejemplo (simulando el clima)
+    weatherButton.addEventListener("click", async () => {
+      try {
+        const weatherData = await getWeather(30); // Usamos el id 1 para obtener un ejemplo
+        alert(`El clima actual en Ciudad de México es: ${weatherData.id} °C`);
+      } catch (error) {
+        alert("No se pudo obtener los datos.");
+      }
     });
 
     // Nueva funcionalidad para el formulario de contacto
