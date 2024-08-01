@@ -1,3 +1,5 @@
+// src/events.js
+
 export function setupEventListeners() {
   document.addEventListener("DOMContentLoaded", () => {
     const changeTextButton = document.getElementById("changeTextButton");
