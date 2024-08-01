@@ -24,3 +24,8 @@ La página web tiene los siguientes elementos:
 - **CSS**: Estilos básicos y diseño responsivo.
 - **JavaScript**: Funcionalidades interactivas.
 - **Webpack**: Compilación y empaquetado de archivos JavaScript y CSS.
+
+### **Instrucciones Adicionales**
+
+- **`npm install`**: Instala todas las dependencias necesarias del proyecto.
+- **`npx webpack`**: Ejecuta Webpack para construir el proyecto y generar los archivos en la carpeta `dist/`.
