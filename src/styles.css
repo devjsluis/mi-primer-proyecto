@@ -70,3 +70,15 @@ li {
     padding: 20px;
     border: 1px solid #ddd;
 }
+
+/* Añadir media queries para mejorar la responsividad */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
