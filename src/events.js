@@ -40,5 +40,12 @@ export function setupEventListeners() {
         alert(`¡Has clickeado en: ${item.textContent}!`);
       });
     });
+
+    // Validación del formulario
+    const contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      alert("Formulario enviado con éxito.");
+    });
   });
 }
