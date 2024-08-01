@@ -1,13 +1,31 @@
-// Espera a que el contenido del DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("changeTextButton");
+  const changeTextButton = document.getElementById("changeTextButton");
+  const changeBackgroundColorButton = document.getElementById(
+    "changeBackgroundColorButton"
+  );
+  const showTimeButton = document.getElementById("showTimeButton");
   const greeting = document.getElementById("greeting");
 
-  button.addEventListener("click", () => {
+  // Cambiar el texto
+  changeTextButton.addEventListener("click", () => {
     greeting.textContent = "¡Texto cambiado con JavaScript!";
   });
 
-  // Nueva funcionalidad: Mostrar un mensaje al hacer clic en un elemento de la lista
+  // Cambiar el color de fondo
+  changeBackgroundColorButton.addEventListener("click", () => {
+    document.body.style.backgroundColor = `rgb(${Math.floor(
+      Math.random() * 256
+    )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
+      Math.random() * 256
+    )})`;
+  });
+
+  // Mostrar la hora actual
+  showTimeButton.addEventListener("click", () => {
+    alert(`La hora actual es: ${new Date().toLocaleTimeString()}`);
+  });
+
+  // Mostrar un mensaje al hacer clic en un elemento de la lista
   const listItems = document.querySelectorAll("ul li");
   listItems.forEach((item) => {
     item.addEventListener("click", () => {
