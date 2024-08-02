@@ -93,5 +93,26 @@ export function setupEventListeners() {
         }
       });
     });
+
+    const commentForm = document.getElementById("commentForm");
+    const commentsList = document.getElementById("commentsList");
+
+    commentForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const commenterName = document.getElementById("commenterName").value;
+      const commentText = document.getElementById("commentText").value;
+
+      if (commenterName && commentText) {
+        const newComment = document.createElement("p");
+        newComment.textContent = `${commenterName}: ${commentText}`;
+        commentsList.appendChild(newComment);
+
+        // Limpiar el formulario
+        commentForm.reset();
+      } else {
+        alert("Por favor, completa todos los campos.");
+      }
+    });
   });
 }

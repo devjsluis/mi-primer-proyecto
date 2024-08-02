@@ -54,6 +54,23 @@
       <p id="formMessage"></p>
     </section>
 
+    <section id="comments-section">
+      <h2>Comentarios</h2>
+      <form id="commentForm">
+        <label for="commenterName">Nombre:</label>
+        <input type="text" id="commenterName" name="commenterName" />
+
+        <label for="commentText">Comentario:</label>
+        <textarea id="commentText" name="commentText"></textarea>
+
+        <button type="submit">Enviar Comentario</button>
+      </form>
+      <div id="commentsList">
+        <h3>Comentarios:</h3>
+        <!-- Los comentarios se añadirán aquí -->
+      </div>
+    </section>
+
     <script src="dist/bundle.js"></script>
   </body>
 </html>
