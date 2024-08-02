@@ -76,5 +76,22 @@ export function setupEventListeners() {
         formMessage.style.color = "red";
       }
     });
+
+    // Validación en tiempo real
+    const inputs = contactForm.querySelectorAll("input, textarea");
+    inputs.forEach((input) => {
+      input.addEventListener("input", () => {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if (name && email && message) {
+          formMessage.textContent = "";
+        } else {
+          formMessage.textContent = "Por favor, completa todos los campos.";
+          formMessage.style.color = "red";
+        }
+      });
+    });
   });
 }
